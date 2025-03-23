@@ -28,77 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            richTextBox1 = new RichTextBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            btnSort = new Button();
+            btnSearch = new Button();
+            richTextBoxArray = new RichTextBox();
+            txtSearch = new TextBox();
+            lableResult = new Label();
             SuspendLayout();
             // 
-            // button1
+            // btnSort
             // 
-            button1.Location = new Point(150, 115);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnSort.Location = new Point(150, 115);
+            btnSort.Name = "btnSort";
+            btnSort.Size = new Size(75, 23);
+            btnSort.TabIndex = 0;
+            btnSort.Text = "Sort";
+            btnSort.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSearch
             // 
-            button2.Location = new Point(260, 114);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnSearch.Location = new Point(260, 114);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 23);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // richTextBoxArray
             // 
-            richTextBox1.Location = new Point(150, 163);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(399, 112);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
+            richTextBoxArray.Location = new Point(150, 163);
+            richTextBoxArray.Name = "richTextBoxArray";
+            richTextBoxArray.Size = new Size(399, 112);
+            richTextBoxArray.TabIndex = 2;
+            richTextBoxArray.Text = "";
             // 
-            // textBox1
+            // txtSearch
             // 
-            textBox1.Location = new Point(352, 115);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            txtSearch.Location = new Point(352, 115);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(100, 23);
+            txtSearch.TabIndex = 3;
             // 
-            // label1
+            // lableResult
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(511, 114);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 4;
-            label1.Text = "label1";
+            lableResult.AutoSize = true;
+            lableResult.Location = new Point(473, 119);
+            lableResult.Name = "lableResult";
+            lableResult.Size = new Size(0, 15);
+            lableResult.TabIndex = 4;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(richTextBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(lableResult);
+            Controls.Add(txtSearch);
+            Controls.Add(richTextBoxArray);
+            Controls.Add(btnSearch);
+            Controls.Add(btnSort);
             Name = "Form1";
             Text = "Binary Search of an Unordered Array";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private RichTextBox richTextBox1;
-        private TextBox textBox1;
-        private Label label1;
+        private Button btnSort;
+        private Button btnSearch;
+        private RichTextBox richTextBoxArray;
+        private TextBox txtSearch;
+        private Label lableResult;
     }
 }
