@@ -28,42 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnSort = new Button();
             btnSearch = new Button();
-            richTextBoxArray = new RichTextBox();
+            richTextBoxJustToShowArray = new RichTextBox();
             txtSearch = new TextBox();
             lableResult = new Label();
+            richTextBoxSortedArray = new RichTextBox();
             SuspendLayout();
             // 
             // btnSort
             // 
-            btnSort.Location = new Point(150, 115);
+            btnSort.Location = new Point(31, 40);
             btnSort.Name = "btnSort";
             btnSort.Size = new Size(75, 23);
             btnSort.TabIndex = 0;
             btnSort.Text = "Sort";
             btnSort.UseVisualStyleBackColor = true;
+            btnSort.Click += btnSort_Click;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(260, 114);
+            btnSearch.Location = new Point(141, 39);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
-            // richTextBoxArray
+            // richTextBoxJustToShowArray
             // 
-            richTextBoxArray.Location = new Point(150, 163);
-            richTextBoxArray.Name = "richTextBoxArray";
-            richTextBoxArray.Size = new Size(399, 112);
-            richTextBoxArray.TabIndex = 2;
-            richTextBoxArray.Text = "";
+            richTextBoxJustToShowArray.Location = new Point(31, 88);
+            richTextBoxJustToShowArray.Name = "richTextBoxJustToShowArray";
+            richTextBoxJustToShowArray.ReadOnly = true;
+            richTextBoxJustToShowArray.Size = new Size(513, 42);
+            richTextBoxJustToShowArray.TabIndex = 2;
+            richTextBoxJustToShowArray.Text = resources.GetString("richTextBoxJustToShowArray.Text");
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(352, 115);
+            txtSearch.Location = new Point(233, 40);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(100, 23);
             txtSearch.TabIndex = 3;
@@ -71,22 +76,34 @@
             // lableResult
             // 
             lableResult.AutoSize = true;
-            lableResult.Location = new Point(473, 119);
+            lableResult.Location = new Point(354, 44);
             lableResult.Name = "lableResult";
             lableResult.Size = new Size(0, 15);
             lableResult.TabIndex = 4;
+            // 
+            // richTextBoxSortedArray
+            // 
+            richTextBoxSortedArray.Location = new Point(31, 152);
+            richTextBoxSortedArray.Name = "richTextBoxSortedArray";
+            richTextBoxSortedArray.ReadOnly = true;
+            richTextBoxSortedArray.Size = new Size(513, 42);
+            richTextBoxSortedArray.TabIndex = 5;
+            richTextBoxSortedArray.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(569, 247);
+            Controls.Add(richTextBoxSortedArray);
             Controls.Add(lableResult);
             Controls.Add(txtSearch);
-            Controls.Add(richTextBoxArray);
+            Controls.Add(richTextBoxJustToShowArray);
             Controls.Add(btnSearch);
             Controls.Add(btnSort);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Binary Search of an Unordered Array";
             Load += Form1_Load;
             ResumeLayout(false);
@@ -97,8 +114,9 @@
 
         private Button btnSort;
         private Button btnSearch;
-        private RichTextBox richTextBoxArray;
+        private RichTextBox richTextBoxJustToShowArray;
         private TextBox txtSearch;
         private Label lableResult;
+        private RichTextBox richTextBoxSortedArray;
     }
 }
