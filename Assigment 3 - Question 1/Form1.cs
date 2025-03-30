@@ -44,6 +44,8 @@ namespace Assigment_3___Question_1
         public Form1()
         {
             InitializeComponent();
+            richTextBoxSortedArray.Font = new Font("Consolas", 9);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,12 +55,32 @@ namespace Assigment_3___Question_1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            int count = 0;
+            foreach (var item in arr)
+            {
+                count++;
+                if (txtSearch.Text == item) 
+                    lableResult.Text = "The " + item + " on a position: " + count;
+            }
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
+            HeapSort(arr);
 
+            richTextBoxSortedArray.Clear();
+
+            string namesLine = "";
+            string indexLine = "";
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                namesLine += arr[i].PadRight(5);
+                indexLine += i.ToString().PadRight(5);
+            }
+
+            richTextBoxSortedArray.AppendText(namesLine + "\n" + indexLine);
         }
+
     }
 }
